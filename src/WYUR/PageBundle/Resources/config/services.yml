@@ -1,0 +1,13 @@
+parameters:
+  wyur.page.admin.class: WYUR\PageBundle\Admin\Entity\PageAdmin
+
+services:
+  wyur.page.admin:
+    class: %wyur.page.admin.class%
+    arguments: [ null, WYUR\PageBundle\Entity\Page, SonataAdminBundle:CRUD ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: Pages, label: Pages, label_catalogue: WYURPageBundle}
+    # calls:
+      # - [ setUserManager, [ @fos_user.user_manager ] ]
+      # - [ setTranslationDomain, [ %sonata.user.admin.user.translation_domain% ] ]
+      # - [ setSecurityContext, [ @security.context ] ]

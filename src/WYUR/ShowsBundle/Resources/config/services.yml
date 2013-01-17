@@ -1,0 +1,13 @@
+parameters:
+  wyur.show.admin.class: WYUR\ShowsBundle\Admin\Entity\ShowAdmin
+
+services:
+  wyur.show.admin:
+    class: %wyur.show.admin.class%
+    arguments: [ null, WYUR\ShowsBundle\Entity\Show, SonataAdminBundle:CRUD ]
+    tags:
+      - { name: sonata.admin, manager_type: orm, group: Shows, label: Shows, label_catalogue: WYURShowsBundle}
+    # calls:
+      # - [ setUserManager, [ @fos_user.user_manager ] ]
+      # - [ setTranslationDomain, [ %sonata.user.admin.user.translation_domain% ] ]
+      # - [ setSecurityContext, [ @security.context ] ]
