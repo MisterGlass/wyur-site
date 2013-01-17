@@ -2,6 +2,7 @@ web/bundles/
 app/bootstrap.php.cache
 app/cache/*
 app/logs/*
+log/*
 build/
 vendor
 bin
