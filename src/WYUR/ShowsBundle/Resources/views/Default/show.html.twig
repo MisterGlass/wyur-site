@@ -3,5 +3,11 @@
 {% block title %}My cool page{% endblock %}
 
 {% block body %}
+	{% if show.image != null %}
+		<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
+	{% else %}
+	<span>No image</span>
+	{% endif %}
+	<br />
     {{ show.name }}<br />{{ show.description }}
 {% endblock %}
