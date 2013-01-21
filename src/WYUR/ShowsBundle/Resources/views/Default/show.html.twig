@@ -9,5 +9,5 @@
 	<span>No image</span>
 	{% endif %}
 	<br />
-    {{ show.name }}<br />{{ show.description }}
+    {{ show.name }}<br />{% if show.description %}{{ show.description|bbcode_filter('main_filter') }}{% endif %}
 {% endblock %}

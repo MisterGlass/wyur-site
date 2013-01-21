@@ -78,3 +78,9 @@ vich_uploader:
             delete_on_remove: true
             inject_on_load: true
             namer: vich_uploader.namer_uniqid
+
+fm_bbcode:
+  filter_sets:
+    main_filter:
+      xhtml: true
+      filters: [ default, block, code, email, image, list, quote, text, url, video ]

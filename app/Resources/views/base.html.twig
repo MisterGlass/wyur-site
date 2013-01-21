@@ -3,11 +3,29 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
+		
+		<link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
+		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/css/main.css" rel="stylesheet" media="screen">
+		
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="container">
+			<div id="header">
+				<a href="/"><img src="/images/logo.png" alt="logo" /></a>
+				<ul>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Schedule</a></li>
+					<li><a href="#">Shows</a></li>
+					<li><a href="#">Listen</a></li>
+				</ul>
+			</div>
+			<div id="main">
+				{% block body %}{% endblock %}
+			</div>
+		</div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
