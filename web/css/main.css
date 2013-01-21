@@ -16,6 +16,11 @@ body	{
 	font-family: 'Armata', sans-serif;
 	background: url("/images/header-bg-stretch.png") repeat-x;
 }
+h1	{
+	text-transform: uppercase;
+	font-size: 48px;
+	margin-left: 40px;
+}
 
 #container	{
 	color: #005d5f;
@@ -47,4 +52,60 @@ body	{
 	text-transform: uppercase;
 	padding-left: 20px;
 	padding-right: 50px;
+}
+
+#main	{
+	padding-top: 35px;
+}
+
+table#schedule	{
+	margin-top: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#schedule td, #schedule th	{
+	width: 150px;
+	height: 150px;
+	border-width: 4px;
+	border-style: solid;
+	border-color: #005d5f;
+	
+	text-align: center;
+}
+#schedule th	{
+	border-left-style: none;
+	border-top-style: none;
+	padding: 10px;
+}
+#schedule th#day	{
+	width: 130px;
+	height: 20px;
+}
+#schedule th#time	{
+	width: 40px;
+	height: 130px;
+}
+#schedule th#corner	{
+	border-style: none;
+	height: 20px;
+	width: 40px;
+}
+#schedule tr:first-child th:last-child	{
+	border-right-style: none;
+}
+#schedule tr:last-child th	{
+	border-bottom-style: none;
+}
+#schedule td	{
+	background-color: #c4cdcd;
+	font-size: 12px;
+}
+table#schedule img	{
+	width: 105px;
+	height: 105px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 6px;
+	padding-bottom: 10px;
+	display: block;
 }

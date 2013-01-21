@@ -34,13 +34,13 @@ class Show
     protected $slug;
 
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=100)
      */
     protected $image;
 
     /**
      * @Assert\File(
-     *     maxSize="5M",
+     *     maxSize="1M",
      *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
      * )
      * @Vich\UploadableField(mapping="show_image", fileNameProperty="image")
@@ -70,6 +70,15 @@ class Show
      */
     protected $slot;
 
+
+    public function __construct()
+    {
+        $this->image   = 'showDefault.png';
+    }
+	
+	
+	
+	
     /**
      * Get id
      *
