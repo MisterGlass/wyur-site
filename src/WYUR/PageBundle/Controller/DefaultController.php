@@ -37,8 +37,7 @@ public function aboutAction()	{
  * @Template
  */
 public function listenAction()	{
-	$page = $this->getDoctrine()->getRepository('WYURPageBundle:Page')->findOneBySlug('listen');
-	return array('page' => $page);
+	return array();
 }
 
 

@@ -13,6 +13,7 @@ class PageAdmin extends Admin
     {
         $showMapper
             ->add('title')
+            ->add('slug')
             ->add('content')
         ;
     }
@@ -29,6 +30,7 @@ class PageAdmin extends Admin
     {
         $listMapper
             ->addIdentifier('title')
+            ->add('content')
         ;
     }
 

@@ -7,7 +7,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Armata' rel='stylesheet' type='text/css'>
 		<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="/css/main.css" rel="stylesheet" media="screen">
-		
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
@@ -19,13 +18,15 @@
 					<li><a href="{{ path('about') }}">About</a></li>
 					<li><a href="{{ path('wyur_shows_default_schedule') }}">Schedule</a></li>
 					<li><a href="{{ path('wyur_shows_default_schedulelist') }}">Shows</a></li>
-					<li><a href="{{ path('listen') }}">Listen</a></li>
+					<li><a href="javascript:void(0);" onclick="openPlayer('{{ path('listen') }}')">Listen</a></li>
 				</ul>
 			</div>
 			<div id="main">
 				{% block body %}{% endblock %}
 			</div>
 		</div>
+		
+		<script type="text/javascript" src="/js/main.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>

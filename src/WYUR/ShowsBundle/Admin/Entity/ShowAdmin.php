@@ -13,6 +13,7 @@ class ShowAdmin extends Admin
     {
         $showMapper
             ->add('name')
+            ->add('slug')
             ->add('hosts')
             ->add('image')
             ->add('description')
