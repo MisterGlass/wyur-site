@@ -18,11 +18,26 @@ public function pageAction(Page $page)	{
 }
 
 /**
- * @Template("WYURPageBundle:Default:page.html.twig")
+ * @Template
  */
 public function homeAction()	{
 	$page = $this->getDoctrine()->getRepository('WYURPageBundle:Page')->findOneBySlug('homepage');
-	//die($page[0]);
+	return array('page' => $page);
+}
+
+/**
+ * @Template
+ */
+public function aboutAction()	{
+	$page = $this->getDoctrine()->getRepository('WYURPageBundle:Page')->findOneBySlug('about');
+	return array('page' => $page);
+}
+
+/**
+ * @Template
+ */
+public function listenAction()	{
+	$page = $this->getDoctrine()->getRepository('WYURPageBundle:Page')->findOneBySlug('listen');
 	return array('page' => $page);
 }
 

@@ -1,6 +1,12 @@
 homepage:
     pattern:  /
     defaults: { _controller: WYURPageBundle:Default:home }
+about:
+    pattern:  /about
+    defaults: { _controller: WYURPageBundle:Default:about }
+listen:
+    pattern:  /listen
+    defaults: { _controller: WYURPageBundle:Default:listen }
 
 _sonata:
     resource: routing_sonata.yml

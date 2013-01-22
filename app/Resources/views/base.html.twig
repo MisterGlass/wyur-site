@@ -14,12 +14,12 @@
     <body>
         <div id="container">
 			<div id="header">
-				<a href="/"><img src="/images/logo.png" alt="logo" /></a>
+				<a href="{{ path('homepage') }}"><img src="/images/logo.png" alt="logo" /></a>
 				<ul>
-					<li><a href="#">About</a></li>
+					<li><a href="{{ path('about') }}">About</a></li>
 					<li><a href="{{ path('wyur_shows_default_schedule') }}">Schedule</a></li>
 					<li><a href="{{ path('wyur_shows_default_schedulelist') }}">Shows</a></li>
-					<li><a href="#">Listen</a></li>
+					<li><a href="{{ path('listen') }}">Listen</a></li>
 				</ul>
 			</div>
 			<div id="main">
