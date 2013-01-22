@@ -1,6 +1,6 @@
-# homepage:
-    # pattern:  /
-    # defaults: { _controller: AcmeDemoBundle:Welcome:index }
+homepage:
+    pattern:  /
+    defaults: { _controller: WYURPageBundle:Default:home }
 
 _sonata:
     resource: routing_sonata.yml
