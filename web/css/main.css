@@ -10,6 +10,7 @@ a:hover	{
 html	{
 	background-color: #dadada;
 	padding-top: 39px;
+	padding-bottom: 20px;
 }
 body	{
 	background-color: inherit;
@@ -20,6 +21,7 @@ h1	{
 	text-transform: uppercase;
 	font-size: 48px;
 	margin-left: 40px;
+	margin-bottom: 30px;
 }
 
 #container	{
@@ -108,4 +110,31 @@ table#schedule img	{
 	padding-top: 6px;
 	padding-bottom: 10px;
 	display: block;
+}
+
+
+#showTop img	{
+	float: left;
+	width: 260px;
+	height: 260px;
+}
+
+
+#showList	{
+	margin-left: 120px;
+}
+#showList li	{
+	list-style-type: none;
+	text-transform: uppercase;
+}
+#showList li a	{
+	display: block;
+	font-weight: bold;
+	font-size: 24px;
+	padding-bottom: 20px;
+}
+#showList li span	{
+	display: block;
+	padding-bottom: 15px;
+	padding-left: 35px;
 }

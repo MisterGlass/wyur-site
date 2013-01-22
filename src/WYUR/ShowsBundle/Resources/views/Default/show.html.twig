@@ -3,11 +3,12 @@
 {% block title %}My cool page{% endblock %}
 
 {% block body %}
-	{% if show.image != null %}
-		<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
-	{% else %}
-	<span>No image</span>
-	{% endif %}
+	<h1>{{ show.name }}</h1>
+	<div id="showTop">
+		{% if show.image != null %}
+			<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
+		{% endif %}
+	</div>
 	<br />
-    {{ show.name }}<br />{% if show.description %}{{ show.description|bbcode_filter('main_filter') }}{% endif %}
+    <br />{% if show.description %}{{ show.description|bbcode_filter('main_filter') }}{% endif %}
 {% endblock %}

@@ -1,0 +1,17 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}My cool page{% endblock %}
+
+{% block body %}
+	<h1>Shows</h1>
+	
+	<ul id="showList">
+	{% for show in shows %}
+		<li>
+			<a href="{{ path('wyur_shows_default_show', {'slug': show.slug}) }}">{{ show.name }}</a>
+			{% if show.hosts %}<span>Hosted by: {{ show.hosts }}</span>{% endif %}
+			{% if show.slot %}<span>Airtime: {{ show.slot }}</span>{% endif %}
+		</li>
+	{% endfor %}
+	</ul>
+{% endblock %}

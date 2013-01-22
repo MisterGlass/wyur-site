@@ -14,7 +14,7 @@ class DefaultController extends Controller
 
 
 /**
- * @Route("/schedule")
+ * @Route("/schedule/grid")
  * @Template
  */
 public function scheduleAction()	{
@@ -24,6 +24,16 @@ public function scheduleAction()	{
 	$drepository = $this->getDoctrine()->getRepository('WYURShowsBundle:Day');
 	$days = $drepository->findAll();
 	return array('hours' => $hours, 'days' => $days);
+}
+
+/**
+ * @Route("/schedule/list")
+ * @Template
+ */
+public function scheduleListAction()	{
+	$repository = $this->getDoctrine()->getRepository('WYURShowsBundle:Show');
+	$shows = $repository->findBy(array(),array('name' => 'ASC'));
+	return array('shows' => $shows);
 }
 
 /**
