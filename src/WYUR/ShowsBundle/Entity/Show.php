@@ -75,7 +75,11 @@ class Show
     {
         $this->image   = 'showDefault.png';
     }
-	
+
+	public function __toString()
+	{
+		return $this->name;
+	}
 	
 	
 	
