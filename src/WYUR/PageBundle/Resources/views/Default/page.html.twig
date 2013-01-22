@@ -1,7 +1,7 @@
 {% extends '::base.html.twig' %}
 
-{% block title %}My cool page{% endblock %}
+{% block title %}{{ page.title }}{% endblock %}
 
 {% block body %}
-    {{ page.title }}<br />{{ page.content }}
+    {{ page.content|raw }}
 {% endblock %}

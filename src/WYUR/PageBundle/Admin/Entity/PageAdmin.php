@@ -21,7 +21,7 @@ class PageAdmin extends Admin
     {
         $formMapper
 			->add('title')
-			->add('content')
+			->add('content', 'ckeditor', array('transformers' => array('strip_js', 'strip_css', 'strip_comments')))
         ;
     }
 

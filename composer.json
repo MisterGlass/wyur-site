@@ -29,7 +29,8 @@
 	"stof/doctrine-extensions-bundle": "dev-master",
         "helios-ag/fm-bbcode-bundle": "dev-master",
         "vich/uploader-bundle": "dev-master",
-        "knplabs/knp-gaufrette-bundle" : "dev-master"
+        "knplabs/knp-gaufrette-bundle" : "dev-master",
+		"Trsteel/ckeditor-bundle": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [

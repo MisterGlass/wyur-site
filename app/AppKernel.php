@@ -36,6 +36,7 @@ class AppKernel extends Kernel
 			new Vich\UploaderBundle\VichUploaderBundle(),
 			new WYUR\ShowsBundle\WYURShowsBundle(),
 			new WYUR\PageBundle\WYURPageBundle(),
+			new Trsteel\CkeditorBundle\TrsteelCkeditorBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

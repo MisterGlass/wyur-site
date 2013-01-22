@@ -41,7 +41,7 @@ class Show
     /**
      * @Assert\File(
      *     maxSize="1M",
-     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
+     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg", "image/gif"}
      * )
      * @Vich\UploadableField(mapping="show_image", fileNameProperty="image")
      *
