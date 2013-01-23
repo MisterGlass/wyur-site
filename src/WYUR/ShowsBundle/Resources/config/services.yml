@@ -7,7 +7,7 @@ services:
     arguments: [ null, WYUR\ShowsBundle\Entity\Show, SonataAdminBundle:CRUD ]
     tags:
       - { name: sonata.admin, manager_type: orm, group: Shows, label: Shows, label_catalogue: WYURShowsBundle}
-    # calls:
-      # - [ setUserManager, [ @fos_user.user_manager ] ]
-      # - [ setTranslationDomain, [ %sonata.user.admin.user.translation_domain% ] ]
-      # - [ setSecurityContext, [ @security.context ] ]
+    calls:
+      - [ setSecurityContext, [ @security.context ] ]
+      #- [ setUserManager, [ @fos_user.user_manager ] ]
+      #- [ setTranslationDomain, [ %sonata.user.admin.user.translation_domain% ] ]
