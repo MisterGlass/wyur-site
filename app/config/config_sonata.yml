@@ -29,8 +29,10 @@ sonata_admin:
             - { position: left, type: sonata.admin.block.admin_list }
 
             # Customize this part to add new block configuration
-            - { position: right, type: sonata.block.service.text, settings: { content: "Welcome to the new WYUR CMS"} }
+            - { position: right, type: sonata.block.service.text, settings: { content: "Welcome to the new WYUR CMS<br /><a href='/logout'>logout</a>"} }
             #- { position: right, type: sonata.block.service.rss, settings: { title: Sonata Project's Feeds, url: http://sonata-project.org/blog/archive.rss }}
+    security:
+        handler: sonata.admin.security.handler.role
 
 fos_user:
     db_driver:        orm # can be orm or odm
