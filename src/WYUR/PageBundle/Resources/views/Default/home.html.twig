@@ -1,7 +1,11 @@
 {% extends '::base.html.twig' %}
 
-{% block title %}{{ page.title }}{% endblock %}
+{% block title %}Yeshiva University Student Radio{% endblock %}
 
 {% block body %}
-    {{ page.content|raw }}
+	<h1>Yeshiva University Student Radio</h1>
+	<div id="cmsPage">
+		{{ page.content|raw }}
+	</div>
+	<div id="homepageListen"><a href="javascript:void(0);" onclick="openPlayer('{{ path('listen') }}')"><img src="/images/listenButton.png" alt="listen now" /></a></div>
 {% endblock %}

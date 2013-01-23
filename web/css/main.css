@@ -175,3 +175,19 @@ table#schedule img	{
 	padding-bottom: 15px;
 	padding-left: 35px;
 }
+
+
+#cmsPage	{
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#homepageListen	{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	text-align: center;
+	padding: 40px;
+}
