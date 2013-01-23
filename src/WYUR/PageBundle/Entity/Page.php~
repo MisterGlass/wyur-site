@@ -34,6 +34,11 @@ class Page
      */
     protected $content;
 
+	public function __toString()
+	{
+		return $this->title;
+	}
+
     /**
      * Get id
      *

@@ -41,7 +41,7 @@ class Show
     /**
      * @Assert\File(
      *     maxSize="1M",
-     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg"}
+     *     mimeTypes={"image/png", "image/jpeg", "image/pjpeg", "image/gif"}
      * )
      * @Vich\UploadableField(mapping="show_image", fileNameProperty="image")
      *
@@ -53,6 +53,26 @@ class Show
      * @ORM\Column(type="string", length=300, nullable=true)
      */
     protected $hosts;
+
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    protected $site;
+
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    protected $podcast;
+
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    protected $twitter;
+
+    /**
+     * @ORM\Column(type="string", length=500, nullable=true)
+     */
+    protected $facebook;
 
     /**
      * @ORM\Column(type="text", nullable=true)
@@ -75,7 +95,11 @@ class Show
     {
         $this->image   = 'showDefault.png';
     }
-	
+
+	public function __toString()
+	{
+		return $this->name;
+	}
 	
 	
 	

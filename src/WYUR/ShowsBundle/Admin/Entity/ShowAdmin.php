@@ -27,9 +27,13 @@ class ShowAdmin extends Admin
             ->add('slug')
             ->add('hosts')
             ->add('image')
-            ->add('description')
             ->add('soundCloudID')
             ->add('slot')
+            ->add('site')
+            ->add('podcast')
+            ->add('twitter')
+            ->add('facebook')
+            ->add('description')
         ;
     }
 
@@ -48,7 +52,13 @@ class ShowAdmin extends Admin
 			$formMapper->add('slot');
 		}
 		
-		$formMapper->add('imageFile', 'file', array('required' => false, 'help' => 'Images must be png, jpg, or gif & less than 1MB.<br />Images are forced to be square, 105px on the grid page and 260px on the show page.'));
+		$formMapper
+            ->add('site')
+            ->add('podcast')
+            ->add('twitter')
+            ->add('facebook')
+			->add('imageFile', 'file', array('required' => false, 'help' => 'Images must be png, jpg, or gif & less than 1MB.<br />Images are forced to be square, 105px on the grid page and 260px on the show page.'))
+		;
     }
 
     public function configureListFields(ListMapper $listMapper)

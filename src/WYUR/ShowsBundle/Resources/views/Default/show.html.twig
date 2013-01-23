@@ -4,11 +4,43 @@
 
 {% block body %}
 	<h1>{{ show.name }}</h1>
-	<div id="showTop">
-		{% if show.image != null %}
-			<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
+	<div id="showMain">
+		<div id="showTop">
+			{% if show.image != null %}
+				<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
+			{% endif %}
+			
+			{% if show.hosts %}
+				<strong>Hosted by</strong>
+				{{ show.hosts }}
+			{% endif %}
+			
+			{% if show.slot %}
+				<strong>Airtime</strong>
+				{{ show.slot }}
+			{% endif %}
+			
+			{% if show.site or show.podcast or show.twitter or show.facebook %}
+				<strong>Links</strong>
+				{% if show.site %}<a href="{{ show.site }}" target="_blank">Site</a>,{% endif %}
+				{% if show.podcast %}<a href="{{ show.podcast }}" target="_blank">Podcast</a>,{% endif %}
+				{% if show.twitter %}<a href="{{ show.twitter }}" target="_blank">Twitter</a>,{% endif %}
+				{% if show.facebook %}<a href="{{ show.facebook }}" target="_blank">Facebook</a>{% endif %}
+			{% endif %}
+			<div class="clear"></div>
+		</div>
+		{% if show.description %}
+			<div id="showDescription">
+				{{ show.description|bbcode_filter('main_filter') }}
+				<div class="clear"></div>
+			</div>
+		{% endif %}
+		{% if show.soundCloudID %}
+			<div id="showPlayer">
+				<strong>Previous episodes</strong>
+				<iframe width="720" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F{{ show.soundCloudID }}&amp;color=34d6d9&amp;auto_play=false&amp;show_artwork=false"></iframe>
+				<div class="clear"></div>
+			</div>
 		{% endif %}
 	</div>
-	<br />
-    <br />{% if show.description %}{{ show.description|bbcode_filter('main_filter') }}{% endif %}
 {% endblock %}
