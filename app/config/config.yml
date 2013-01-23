@@ -23,6 +23,9 @@ framework:
 twig:
     debug:            %kernel.debug%
     strict_variables: %kernel.debug%
+    globals:
+        google_analytics_id: %google_analytics_id%
+        google_analytics_domain: %google_analytics_domain%
 
 # Assetic Configuration
 assetic:

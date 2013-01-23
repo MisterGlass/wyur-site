@@ -13,3 +13,5 @@ parameters:
 
     locale:            en
     secret:            123j123l1k2j3l12k3j12lk3 l
+    google_analytics_id:  12345
+    google_analytics_domain:  wyur.net

@@ -1,0 +1,19 @@
+.clear	{
+	clear: both;
+}
+
+body	{
+	margin: 0px;
+	background: #021C24 url("/images/playerbg.png") no-repeat center;
+	height:130px;
+}
+img	{
+	position: absolute;
+	left: 22px;
+	bottom: 0px;
+}
+#player	{
+	position: absolute;
+	right: 80px;
+	bottom: 45px;
+}

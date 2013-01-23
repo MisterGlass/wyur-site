@@ -4,12 +4,23 @@
         <meta charset="UTF-8" />
         <title>WYUR - Listen</title>
 		<link rel="icon" type="image/png" href="/images/favicon.png">
+	
+		<link href="/css/player.css" rel="stylesheet" media="screen">
+		
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', '{{ google_analytics_id }}']);
+		  _gaq.push(['_setDomainName', '{{ google_analytics_domain }}']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
     </head>
     <body>
-        <div id="container">
-			<div id="main">
-				<span>Player goes here</span>
-			</div>
-		</div>
+		<img alt="logo" src="/images/logo.png">
+		<div id="player"><!--Wavestreaming.com SHOUTcast Flash Player--><script type="text/javascript" src="http://player.wavestreamer.com/cgi-bin/swf.js?id=J8PO8KOW1WNSX1A2"></script><script type="text/javascript" src="http://player.wavestreaming.com/?id=J8PO8KOW1WNSX1A2"></script><!--End Player--></div>
     </body>
 </html>

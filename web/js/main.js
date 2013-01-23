@@ -1,3 +1,3 @@
 function openPlayer(url)	{
-	window.open(url,'WYUR Player','height=50,width=400');
+	window.open(url,'WYUR_Player','height=130,width=660');
 }
