@@ -6,7 +6,9 @@
 	<h1>{{ show.name }}</h1>
 	<div id="showMain">
 		<div id="showTop">
-			{% if show.image != null %}
+			{% if show.imageFile == '/srv/www/wyur/app/../web/images/shows/showDefault.png' %}
+				<img src="/images/showDefault.png" alt="{{ show.name }} image" />
+			{% else %}
 				<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
 			{% endif %}
 			
