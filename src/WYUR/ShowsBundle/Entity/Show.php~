@@ -80,7 +80,7 @@ class Show
     protected $description;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     protected $soundCloudID;
 
@@ -272,5 +272,97 @@ class Show
     public function getSlot()
     {
         return $this->slot;
+    }
+
+    /**
+     * Set site
+     *
+     * @param string $site
+     * @return Show
+     */
+    public function setSite($site)
+    {
+        $this->site = $site;
+    
+        return $this;
+    }
+
+    /**
+     * Get site
+     *
+     * @return string 
+     */
+    public function getSite()
+    {
+        return $this->site;
+    }
+
+    /**
+     * Set podcast
+     *
+     * @param string $podcast
+     * @return Show
+     */
+    public function setPodcast($podcast)
+    {
+        $this->podcast = $podcast;
+    
+        return $this;
+    }
+
+    /**
+     * Get podcast
+     *
+     * @return string 
+     */
+    public function getPodcast()
+    {
+        return $this->podcast;
+    }
+
+    /**
+     * Set twitter
+     *
+     * @param string $twitter
+     * @return Show
+     */
+    public function setTwitter($twitter)
+    {
+        $this->twitter = $twitter;
+    
+        return $this;
+    }
+
+    /**
+     * Get twitter
+     *
+     * @return string 
+     */
+    public function getTwitter()
+    {
+        return $this->twitter;
+    }
+
+    /**
+     * Set facebook
+     *
+     * @param string $facebook
+     * @return Show
+     */
+    public function setFacebook($facebook)
+    {
+        $this->facebook = $facebook;
+    
+        return $this;
+    }
+
+    /**
+     * Get facebook
+     *
+     * @return string 
+     */
+    public function getFacebook()
+    {
+        return $this->facebook;
     }
 }

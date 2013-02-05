@@ -43,7 +43,7 @@ class ShowAdmin extends Admin
             ->add('name')
             ->add('hosts')
             ->add('description', null, array(), array('help' => 'This is the main show description block. <a href="http://www.bbcode.org/reference.php">BBCode</a> can be used to add rich content.'))
-            ->add('soundCloudID', null, array(), array('name' => 'SoundCloud ID', 'help' => 'This is the ID number for the shows soundcloud account'))
+            ->add('soundCloudID', null, array(), array('name' => 'SoundCloud Username', 'help' => 'This is the username for the shows soundcloud account'))
         ;
 
         /** @var $user \Application\Sonata\UserBundle\Entity\User */

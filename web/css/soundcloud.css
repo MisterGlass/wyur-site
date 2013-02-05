@@ -1,0 +1,49 @@
+/*	
+	Soundcloud player styles
+	If the CSS below looks weird, its because I am working witih
+	HTML/CSS provided by coundcloud, which is less that ideal for my goals 
+*/
+
+.sc-player	{
+	background: #a8a8a8;
+	width: 700px;
+	height: auto;
+}
+.sc-player ol.sc-artwork-list	{
+	background: none;
+	display: hidden;
+	height: 90px;
+}
+.sc-player ol.sc-artwork-list li, .sc-player ol.sc-artwork-list li .sc-no-artwork, .sc-player ol.sc-artwork-list li.active	{
+	display: none;
+}
+.sc-player ol.sc-trackslist	{
+	background-color: #333333;
+	position: relative;
+	top: 0;
+	height: 500px;
+}
+.sc-player .sc-info-toggle	{
+	display: none;
+}
+.sc-player .sc-controls	{
+	position: absolute;
+	top: 45px;
+	left: 45px;
+}
+.sc-player .sc-scrubber, .sc-player:hover .sc-scrubber {
+	display: block;
+	position: absolute;
+	top: 40px;
+	left: 100px;
+	width: 580px;
+}
+.sc-player ol.sc-trackslist li	{
+	width: 96%;
+}
+.sc-player ol.sc-trackslist li .sc-track-duration	{
+	float: right;
+}
+.sc-player .sc-scrubber .sc-time-span	{
+	width: 98%;
+}

@@ -1,5 +1,21 @@
 {% extends '::base.html.twig' %}
 
+{# JS/CSS for SoundCloud widget. Need two ifs because of how twig compiles templates #}
+{% block stylesheets %}
+	{% if show.soundCloudID %}
+		<link rel="stylesheet" href="/vendor/soundcloud/css/sc-player-standard.css" type="text/css">
+		<link rel="stylesheet" href="/vendor/soundcloud/css/sc-player.css" type="text/css">
+		<link rel="stylesheet" href="/css/soundcloud.css" type="text/css">
+	{% endif %}
+{% endblock %}
+{% block javascripts %}
+	{% if show.soundCloudID %}
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="/vendor/soundcloud/js/soundcloud.player.api.js"></script>
+		<script type="text/javascript" src="/vendor/soundcloud/js/sc-player.js"></script>
+	{% endif %}
+{% endblock %}
+
 {% block title %}{{ show.name }}{% endblock %}
 
 {% block body %}
@@ -40,7 +56,7 @@
 		{% if show.soundCloudID %}
 			<div id="showPlayer">
 				<strong>Previous episodes</strong>
-				<iframe width="720" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fusers%2F{{ show.soundCloudID }}&amp;color=34d6d9&amp;auto_play=false&amp;show_artwork=false"></iframe>
+				<a href="http://soundcloud.com/{{ show.soundCloudID }}" class="sc-player">My latest tracks</a>
 				<div class="clear"></div>
 			</div>
 		{% endif %}

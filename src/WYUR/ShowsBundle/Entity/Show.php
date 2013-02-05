@@ -80,7 +80,7 @@ class Show
     protected $description;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     protected $soundCloudID;
 
