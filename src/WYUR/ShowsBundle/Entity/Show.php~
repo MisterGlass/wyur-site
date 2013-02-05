@@ -34,7 +34,7 @@ class Show
     protected $slug;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     protected $image;
 
@@ -93,7 +93,6 @@ class Show
 
     public function __construct()
     {
-        $this->image   = 'showDefault.png';
     }
 
 	public function __toString()

@@ -22,10 +22,10 @@
 	<h1>{{ show.name }}</h1>
 	<div id="showMain">
 		<div id="showTop">
-			{% if show.imageFile == '/srv/www/wyur/app/../web/images/shows/showDefault.png' %}
-				<img src="/images/showDefault.png" alt="{{ show.name }} image" />
-			{% else %}
+			{% if show.imageFile %}
 				<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
+			{% else %}
+				<img src="/images/showDefault.png" alt="{{ show.name }} image" />
 			{% endif %}
 			
 			{% if show.hosts %}

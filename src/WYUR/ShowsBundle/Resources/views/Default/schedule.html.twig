@@ -20,10 +20,10 @@
 				{% else %}
 					<td>
 						<a href="{{ path('wyur_shows_default_show', {'slug': slot.show.slug}) }}">
-							{% if slot.show.imageFile == '/srv/www/wyur/app/../web/images/shows/showDefault.png' %}
-								<img src="/images/showDefault.png" alt="{{ slot.show.name }} image" />
-							{% else %}
+							{% if slot.show.imageFile %}
 								<img src="{{ vich_uploader_asset(slot.show, 'imageFile') }}" alt="{{ slot.show.name }} image" />
+							{% else %}
+								<img src="/images/showDefault.png" alt="{{ slot.show.name }} image" />
 							{% endif %}
 							{{ slot.show.name }}
 						</a>
