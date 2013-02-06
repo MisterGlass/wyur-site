@@ -15,6 +15,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Show
 {
+	
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -89,6 +90,20 @@ class Show
      * @ORM\JoinColumn(name="slot_id", referencedColumnName="id", nullable=true)
      */
     protected $slot;
+	
+	/**
+	 * @Gedmo\Timestampable(on="update")
+	 * @Doctrine\ORM\Mapping\Column(type="datetime")
+	 */
+	private $updated;
+
+    /**
+     * @var string $updatedBy
+     *
+     * @Gedmo\Blameable(on="update")
+     * @ORM\Column(type="string")
+     */
+    private $updatedBy;
 
 
     public function __construct()

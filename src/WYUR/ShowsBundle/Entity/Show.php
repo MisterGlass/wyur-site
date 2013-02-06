@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\UploadedFile as UploadedFile;
 
 /**
  * @ORM\Entity
@@ -15,6 +16,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
  */
 class Show
 {
+	
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -89,6 +91,20 @@ class Show
      * @ORM\JoinColumn(name="slot_id", referencedColumnName="id", nullable=true)
      */
     protected $slot;
+	
+	/**
+	 * @Gedmo\Timestampable(on="update")
+	 * @Doctrine\ORM\Mapping\Column(type="datetime")
+	 */
+	private $updated;
+
+    /**
+     * @var string $updatedBy
+     *
+     * @Gedmo\Blameable(on="update")
+     * @ORM\Column(type="string")
+     */
+    private $updatedBy;
 
 
     public function __construct()
@@ -157,6 +173,15 @@ class Show
     {
         return $this->slug;
     }
+	
+	public function setImageFile($image)
+	{
+		$this->imageFile = $image;
+
+		if ($image instanceof UploadedFile) {
+			$this->setUpdated(new \DateTime());
+		}
+	}
 
     /**
      * Set image
@@ -363,5 +388,51 @@ class Show
     public function getFacebook()
     {
         return $this->facebook;
+    }
+
+    /**
+     * Set updated
+     *
+     * @param \DateTime $updated
+     * @return Show
+     */
+    public function setUpdated($updated)
+    {
+        $this->updated = $updated;
+    
+        return $this;
+    }
+
+    /**
+     * Get updated
+     *
+     * @return \DateTime 
+     */
+    public function getUpdated()
+    {
+        return $this->updated;
+    }
+
+    /**
+     * Set updatedBy
+     *
+     * @param string $updatedBy
+     * @return Show
+     */
+    public function setUpdatedBy($updatedBy)
+    {
+        $this->updatedBy = $updatedBy;
+    
+        return $this;
+    }
+
+    /**
+     * Get updatedBy
+     *
+     * @return string 
+     */
+    public function getUpdatedBy()
+    {
+        return $this->updatedBy;
     }
 }

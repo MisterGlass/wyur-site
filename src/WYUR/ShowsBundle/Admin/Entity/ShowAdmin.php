@@ -34,6 +34,8 @@ class ShowAdmin extends Admin
             ->add('twitter')
             ->add('facebook')
             ->add('description')
+            ->add('updated')
+            ->add('updatedBy')
         ;
     }
 
