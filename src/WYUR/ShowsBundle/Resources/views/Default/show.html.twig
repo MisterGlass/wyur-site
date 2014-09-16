@@ -23,7 +23,7 @@
 	<div id="showMain">
 		<div id="showTop">
 			{% if show.imageFile %}
-				<img src="{{ vich_uploader_asset(show, 'imageFile') }}" alt="{{ show.name }} image" />
+				<img src="{{ vich_uploader_asset(show, 'show_image') }}" alt="{{ show.name }} image" />
 			{% else %}
 				<img src="/images/showDefault.png" alt="{{ show.name }} image" />
 			{% endif %}
