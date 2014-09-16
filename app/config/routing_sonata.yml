@@ -16,6 +16,6 @@ sonata_user:
     prefix: /admin
 
 sonata_user_profile:
-    resource: "@SonataUserBundle/Resources/config/routing/profile.xml"
+    resource: "@SonataUserBundle/Resources/config/routing/sonata_profile_1.xml"
     prefix: /profile
 

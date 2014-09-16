@@ -18,7 +18,7 @@ sonata_admin:
         user_block:               SonataAdminBundle:Core:user_block.html.twig
         preview:                  SonataAdminBundle:CRUD:preview.html.twig
         history:                  SonataAdminBundle:CRUD:history.html.twig
-        history_revision:         SonataAdminBundle:CRUD:history_revision.html.twig
+        #history_revision:         SonataAdminBundle:CRUD:history_revision.html.twig
         action:                   SonataAdminBundle:CRUD:action.html.twig
         short_object_description: SonataAdminBundle:Helper:short-object-description.html.twig
         delete:                   SonataAdminBundle:CRUD:delete.html.twig
