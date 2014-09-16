@@ -22,7 +22,7 @@ class PageAdmin extends Admin
     {
         $formMapper
 			->add('title')
-			->add('content', 'ckeditor', array('transformers' => array('strip_js', 'strip_css', 'strip_comments'), 'width' => '800', 'height' => '400'))
+			->add('content', 'ckeditor', array('transformers' => array('html_purifier'), 'width' => '800', 'height' => '400'))
         ;
     }
 
