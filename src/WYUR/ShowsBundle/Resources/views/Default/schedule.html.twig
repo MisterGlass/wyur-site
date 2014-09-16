@@ -21,7 +21,7 @@
 					<td>
 						<a href="{{ path('wyur_shows_default_show', {'slug': slot.show.slug}) }}">
 							{% if slot.show.imageFile %}
-								<img src="{{ vich_uploader_asset(slot.show, 'show_image') }}" alt="{{ slot.show.name }} image" />
+								<img src="{{ vich_uploader_asset(slot.show, 'imageFile') }}" alt="{{ slot.show.name }} image" />
 							{% else %}
 								<img src="/images/showDefault.png" alt="{{ slot.show.name }} image" />
 							{% endif %}
