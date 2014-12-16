@@ -60,5 +60,10 @@
 				<div class="clear"></div>
 			</div>
 		{% endif %}
+		{% if show.mixCloudID %}
+			<div id="showPlayer">
+				<iframe width="720" height="700" src="https://www.mixcloud.com/widget/iframe/?feed=http%3A%2F%2Fwww.mixcloud.com%2F{{ show.mixCloudID|url_encode }}%2F&amp;mini=&amp;embed_uuid=3b9cd0ee-b876-4ed1-b439-281ac0010e03&amp;replace=0&amp;hide_cover=&amp;light=&amp;hide_artwork=&amp;stylecolor=&amp;embed_type=widget_standard&amp;hide_tracklist=&amp;autoplay=" frameborder="0"></iframe><div style="clear:both; height:3px; width:100;"></div><p style="display:block; font-size:11px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; margin:0; padding: 3px 4px; color:#999; width:100;"><a href="http://www.mixcloud.com/{{ show.mixCloudID|url_encode }}/?utm_source=widget&amp;amp;utm_medium=web&amp;amp;utm_campaign=base_links&amp;amp;utm_term=resource_link" target="_blank" style="color:#808080; font-weight:bold;">{{ show.mixCloudID|url_encode }}</a><span> on </span><a href="http://www.mixcloud.com/?utm_source=widget&amp;utm_medium=web&amp;utm_campaign=base_links&amp;utm_term=homepage_link" target="_blank" style="color:#808080; font-weight:bold;"> Mixcloud</a></p><div style="clear:both; height:3px;"></div>
+			</div>
+		{% endif %}
 	</div>
 {% endblock %}
