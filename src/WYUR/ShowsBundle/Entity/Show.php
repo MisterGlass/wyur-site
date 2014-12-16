@@ -86,6 +86,11 @@ class Show
      */
     protected $soundCloudID;
 
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    protected $mixCloudID;
+
 	/**
      * @ORM\OneToOne(targetEntity="Slot", inversedBy="show")
      * @ORM\JoinColumn(name="slot_id", referencedColumnName="id", nullable=true)
@@ -434,5 +439,28 @@ class Show
     public function getUpdatedBy()
     {
         return $this->updatedBy;
+    }
+
+    /**
+     * Set mixCloudID
+     *
+     * @param string $mixCloudID
+     * @return Show
+     */
+    public function setMixCloudID($mixCloudID)
+    {
+        $this->mixCloudID = $mixCloudID;
+
+        return $this;
+    }
+
+    /**
+     * Get mixCloudID
+     *
+     * @return string 
+     */
+    public function getMixCloudID()
+    {
+        return $this->mixCloudID;
     }
 }
