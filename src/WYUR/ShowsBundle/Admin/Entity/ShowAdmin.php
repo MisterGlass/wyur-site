@@ -28,6 +28,7 @@ class ShowAdmin extends Admin
             ->add('hosts')
             ->add('image')
             ->add('soundCloudID')
+            ->add('mixCloudID')
             ->add('slot')
             ->add('site')
             ->add('podcast')
@@ -46,6 +47,7 @@ class ShowAdmin extends Admin
             ->add('hosts')
             ->add('description', null, array(), array('help' => 'This is the main show description block. <a href="http://www.bbcode.org/reference.php">BBCode</a> can be used to add rich content.'))
             ->add('soundCloudID', null, array(), array('name' => 'SoundCloud Username', 'help' => 'This is the username for the shows soundcloud account'))
+            ->add('mixCloudID', null, array(), array('name' => 'MixCloud Username', 'help' => 'This is the username for the shows mixcloud account, a soundcloud alternative that offer unlimited hosting but has ads'))
         ;
 
         /** @var $user \Application\Sonata\UserBundle\Entity\User */
