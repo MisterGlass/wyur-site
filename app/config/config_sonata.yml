@@ -67,6 +67,7 @@ sonata_user:
 sonata_block:
     default_contexts: [cms]
     blocks:
+        sonata.user.block.menu:
         sonata.admin.block.admin_list:
             contexts:   [admin]
 
