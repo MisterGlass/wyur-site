@@ -19,7 +19,7 @@ class DefaultController extends Controller
  */
 public function scheduleAction()	{
 	$hrepository = $this->getDoctrine()->getRepository('WYURShowsBundle:Hour');
-	$hours = $hrepository->findAll();
+	$hours = $hrepository->findBy([], ['orderNum' => 'ASC']);;
 	
 	$drepository = $this->getDoctrine()->getRepository('WYURShowsBundle:Day');
 	$days = $drepository->findAll();
